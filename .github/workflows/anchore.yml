@@ -15,7 +15,7 @@ jobs:
         uses: actions/upload-artifact@v1.0.0
         with:
          name: AnchoreReports
-         path: ./.github/workflows/reports/
+         path: ./.github/workflows/reports
           
       - name: Login to DockerHub
         uses: docker/login-action@v2

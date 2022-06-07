@@ -6,10 +6,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the container image
-        run: docker build . --file Dockerfile --tag localbuild/testimage1:latest
+        run: docker build . --file Dockerfile --tag localbuild/testimage:latest
       - uses: anchore/scan-action@v3
         with:
-          image: "localbuild/testimage1:latest"
+          image: "localbuild/testimage:latest"
           fail-build: false
       - name: Create SBOM
         uses: anchore/sbom-action@v0
